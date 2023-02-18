@@ -29,7 +29,7 @@ class Professor(Person):
         super().__init__(name, surname)
 
     def __str__(self):
-        return f'You have been teaching {self.subj} for {self.exp}.'
+        return f'{self.name} {self.surname} have been teaching {self.subj} for {self.exp}.'
 
     def __repr__(self):
         return f'{self.subj}, {self.exp}'
@@ -53,3 +53,7 @@ class University(Student):
     def __repr__(self):
         return f'{self.name}, {self.surname}, {self.university_name}, {self.budget}'
 
+
+amyh = University('Amy', 'Hinderson', 17, 'Mathematics', 'Oxford', 3000)
+print(amyh)
+print(amyh.check_budget())
